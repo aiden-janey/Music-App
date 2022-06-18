@@ -8,26 +8,14 @@
 </head>
 
 <body>
-    <?php
-    include "scripts/connect.php";
-    ?>
-    <section>
+    <nav>
         <ul>
             <li><a href="../index.php">Home</a></li>
-            <li><a href="addSong.php">Add Song</a></li>
+            <li><a href="#">Add Song</a></li>
         </ul>
-        <form action="" method="post">
-            <input type="text" name="searchbar" placeholder="Search Song, Album, or Artist...">
-            <select name="queryoption">
-                <option value="Song">Song</option>
-                <option value="Album">Album</option>
-                <option value="Artist">Artist</option>
-            </select>
-            <input type="submit" value="Search">
-        </form>
-    </section>
-    <section>
-        <form action="addToLib.php" method="post">
+    </nav>
+    <main>
+        <form action="../scripts/addToLib.php" method="post" enctype="multipart/form-data">
             <label>Album Name</label>
             <input type="text" name="albumName"><br>
             <label>Genre</label>
@@ -42,7 +30,7 @@
             <input type="file" name="songFile"><br>
             <input type="submit" value="Add Song">
         </form>
-    </section>
+    </main>
 </body>
 
 </html>

@@ -16,7 +16,14 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    
+    float: left;
+    background-color: aqua;
+  }
+  li{
+    display: inline;
+  }
+  #search{
+    float: right;
   }
   table, th, td {
     border: 1px solid black;

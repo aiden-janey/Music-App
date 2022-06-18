@@ -14,10 +14,10 @@
         ?>
         <nav>
             <ul>
-                <li><a href="index.php">Home</a></li>
+                <li><a href="#">Home</a></li>
                 <li><a href="pages/addSong.php">Add Song</a></li>
                 <li>
-                    <form action="search.php" method="post">
+                    <form action="search.php" method="post" id="search">
                         <input type="text" name="searchbar" placeholder="Search Song, Album, or Artist...">
                         <select name="queryoption">
                             <option value="Song">Song</option>
@@ -51,6 +51,7 @@
                         echo "<td>" . $row['artist'] . "</td>";
                         echo "<td>" . $row['songName'] . "</td>";
                         echo "<td>" . $row['releaseYear'] . "</td>";
+                        echo "<td><a href=" . $row['fileLocation'] . " download>Download</a></td>";
                         echo "</tr>";
                     }
                 } else {
